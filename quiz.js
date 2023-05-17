@@ -1,3 +1,12 @@
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  
 // Fragen und Antworten
 var questions = [
   {
@@ -200,7 +209,7 @@ var questions = [
 ];
   
   // Nur 10 Fragen pro Runde auswählen
-  var selectedQuestions = shuffle(questions).slice(0, 10);
+  var selectedQuestions = shuffleArray(questions).slice(0, 10);
   
   var currentQuestionIndex = 0;
   var score = 0;
