@@ -200,7 +200,7 @@ var questions = [
 ];
   
   // Nur 10 Fragen pro Runde auswählen
-  var selectedQuestions = questions.slice(0, 10);
+  var selectedQuestions = shuffle(questions).slice(0, 10);
   
   var currentQuestionIndex = 0;
   var score = 0;
